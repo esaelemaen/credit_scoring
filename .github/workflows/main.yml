@@ -42,6 +42,7 @@ jobs:
       - name: Run mlflow project
         run: |
           unset MLFLOW_RUN_ID
+          export MLFLOW_TRACKING_URI="file://${{ github.workspace }}/mlruns"
           mlflow run MLproject/ --env-manager=local 
 
       - name: Set up Git LFS
