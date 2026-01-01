@@ -21,11 +21,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE
       - uses: actions/checkout@v4
  
-      # Setup Python 3.12.7
-      - name: Set up Python 3.12.7
+      # Setup Python
+      - name: Set up Python 3.10.18
         uses: actions/setup-python@v4
         with:
-          python-version: "3.12.7"
+          python-version: "3.10.18"
       
       # Check Env Variables
       - name: Check Env
