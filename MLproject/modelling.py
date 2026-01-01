@@ -28,10 +28,8 @@ if __name__ == "__main__":
     tracking_uri = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mlruns")
     mlflow.set_tracking_uri(tracking_uri)
 
-    active_run = mlflow.active_run()
-    run_context = active_run if active_run else mlflow.start_run()
  
-    with run_context as run:
+    with mlflow.start_run(nested=True) as run:
         model = RandomForestClassifier(n_estimators=n_estimators, max_depth=max_depth)
         model.fit(X_train, y_train)
  
