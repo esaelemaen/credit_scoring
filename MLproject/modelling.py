@@ -25,7 +25,7 @@ if __name__ == "__main__":
     n_estimators = int(sys.argv[1]) if len(sys.argv) > 1 else 505
     max_depth = int(sys.argv[2]) if len(sys.argv) > 2 else 37
 
-    tracking_uri = sys.argv[3] if len(sys.argv) > 3 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "mlruns")
+    tracking_uri = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mlruns")
     mlflow.set_tracking_uri(tracking_uri)
  
     with mlflow.start_run():
