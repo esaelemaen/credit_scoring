@@ -10,6 +10,8 @@ on:
  
 env:
   CSV_URL: "MLproject/train_pca.csv"
+  ACTIONS_RUNNER_DEBUG: true
+  ACTIONS_STEP_DEBUG: true
  
 jobs:
   build:
